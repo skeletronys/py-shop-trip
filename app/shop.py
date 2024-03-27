@@ -20,7 +20,7 @@ class Shop:
             temper_cost = value * self.product[product]
             total_cost += temper_cost
         if print_ is True:
-            print(f"{customer_product.name}'s trip to "
+            print(f"{customer_product.name}'s trip to " 
                   f"the {self.name} costs {round(total_cost, 2)}")
         return round(total_cost, 2)
 
