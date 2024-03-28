@@ -25,21 +25,8 @@ def shop_trip() -> None:
                             human["car"])
 
         print(f"{customer.name} has {customer.money} dollars")
-        has_money = False
-        for shop in range(len(shop_list)):
-            car = Car(customer.car["fuel_consumption"],
-                      info_in_file["FUEL_PRICE"],
-                      shop_list[shop],
-                      customer.location)
-            temper_result = shop_list[shop].get_spent_money(
-                customer,
-                car.get_fuel_cost(),
-                True)
-            if temper_result < customer.money:
-                has_money = True
-        if has_money is False:
-            print(f"{customer.name} doesn't have enough "
-                  f"money to make a purchase in any shop")
+        customer_info = customer.customer_trip_to_shop(shop_list, info_in_file)
+        if customer_info is False:
             break
         car_to_buy = Car(
             customer.car["fuel_consumption"],
