@@ -2,10 +2,12 @@ from datetime import datetime
 
 
 class Shop:
-    def __init__(self,
-                 name: str,
-                 location: list,
-                 product: dict) -> None:
+    def __init__(
+            self,
+            name: str,
+            location: list,
+            product: dict
+    ) -> None:
         self.name = name
         self.location = location
         self.product = product
@@ -14,7 +16,8 @@ class Shop:
             self,
             customer_product: dict,
             car_fuel_cost: float,
-            print_: bool) -> int | float:
+            print_: bool
+    ) -> int | float:
         total_cost = car_fuel_cost
         for product, value in customer_product.product_cart.items():
             temper_cost = value * self.product[product]

@@ -7,7 +7,8 @@ class Car:
             fuel_consumption: int | float,
             fuel_price: int | float,
             shop: dict,
-            customer_location: list[int]) -> None:
+            customer_location: list[int]
+    ) -> None:
         self.fuel_consumption = fuel_consumption
         self.fuel_price = fuel_price
         self.shop = shop

@@ -14,15 +14,19 @@ def shop_trip() -> None:
     itterable = 0
     shop_list = []
     for shop in info_in_file["shops"]:
-        shop_list.append(Shop(shop["name"],
-                              shop["location"],
-                              shop["products"]))
+        shop_list.append(Shop(
+            shop["name"],
+            shop["location"],
+            shop["products"])
+        )
     for human in info_in_file["customers"]:
-        customer = Customer(human["name"],
-                            human["product_cart"],
-                            human["location"],
-                            human["money"],
-                            human["car"])
+        customer = Customer(
+            human["name"],
+            human["product_cart"],
+            human["location"],
+            human["money"],
+            human["car"]
+        )
 
         print(f"{customer.name} has {customer.money} dollars")
         customer_info = customer.customer_trip_to_shop(shop_list, info_in_file)
