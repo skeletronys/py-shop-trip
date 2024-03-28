@@ -1,8 +1,9 @@
 import json
+from os import path
+
 from app.customer import Customer
 from app.shop import Shop
 from app.car import Car
-from os import path
 
 
 def shop_trip() -> None:
@@ -44,7 +45,8 @@ def shop_trip() -> None:
             customer.car["fuel_consumption"],
             info_in_file["FUEL_PRICE"],
             shop_list[itterable],
-            customer.location)
+            customer.location
+        )
         temper_res = shop_list[itterable].get_spent_money(
             customer,
             car_to_buy.get_fuel_cost(),

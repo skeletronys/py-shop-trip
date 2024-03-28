@@ -9,7 +9,8 @@ class Customer:
             product_cart: dict,
             location: list[int, int],
             money: int,
-            car: dict) -> None:
+            car: dict
+    ) -> None:
         self.name = name
         self.product_cart = product_cart
         self.location = location
@@ -22,10 +23,12 @@ class Customer:
     def show_cost_to_shop(
             self,
             shop: Shop,
-            fuel_price: float | int) -> int | float:
+            fuel_price: float | int
+    ) -> int | float:
         get_car = Car(
             self.car["brand"],
             self.location,
             self.car["fuel_consumption"],
-            fuel_price)
+            fuel_price
+        )
         return get_car.get_cost_trip(shop["location"])
