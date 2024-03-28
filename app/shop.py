@@ -34,8 +34,10 @@ class Shop:
         print(words_fixed_flake8_app.strip())
         for product, value in customer_product.product_cart.items():
             temper_cost = value * self.product[product]
-            print((f"{value} {product}s for "
-                  f"{str(temper_cost).rstrip("0").rstrip(".")} dollars"))
+            print(
+                f"{value} {product}s for "
+                f"{str(temper_cost).rstrip('0').rstrip('.')} dollars"
+            )
             total_cost += temper_cost
         print(f"Total cost is {round(total_cost, 2)} dollars")
         print("See you again!")

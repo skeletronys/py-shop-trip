@@ -2,10 +2,12 @@ from math import sqrt
 
 
 class Car:
-    def __init__(self, fuel_consumption: int | float,
-                 fuel_price: int | float,
-                 shop: dict,
-                 customer_location: list) -> None:
+    def __init__(
+            self,
+            fuel_consumption: int | float,
+            fuel_price: int | float,
+            shop: dict,
+            customer_location: list) -> None:
         self.fuel_consumption = fuel_consumption
         self.fuel_price = fuel_price
         self.shop = shop
